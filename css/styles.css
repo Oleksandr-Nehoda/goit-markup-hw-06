@@ -212,6 +212,11 @@ ul {
   border-radius: 4px;
 }
 
+.modal-btn-submit:hover,
+.hero-btn:hover {
+  background-color: #188ce8;
+}
+
 /* Модальне вікно */
 
 .backdrop {
@@ -279,6 +284,16 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal-close-icon {
+  transition-property: fill;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
+}
+
+.modal-btn-close:hover .modal-close-icon {
+  fill: var(--accent-text-cl);
+}
+
 .modal-title {
   font-size: 20px;
   line-height: 1.15em;
@@ -312,12 +327,26 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  transition-property: border-color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
-.modal-percon-icon {
+.modal-input:focus-within {
+  border-color: var(--accent-text-cl);
+}
+
+.modal-icon {
   position: absolute;
   bottom: 10px;
   left: 12px;
+  transition-property: fill;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-text-cl);
 }
 
 .modal-comment {
@@ -327,6 +356,13 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  transition-property: border-color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
+}
+
+.modal-comment:focus-within {
+  border-color: var(--accent-text-cl);
 }
 
 .modal-comment::placeholder {
@@ -353,11 +389,14 @@ ul {
   outline: 2px solid var(--title-text-cl);
   border-radius: 2px;
   outline-offset: -2px;
+  transition-property: background-color, outline-color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .checkbox:checked + .custom-checkbox {
   background-color: var(--accent-text-cl);
-  outline: 2px solid var(--accent-text-cl);
+  outline-color: var(--accent-text-cl);
 }
 
 .text-policy {
