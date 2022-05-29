@@ -299,7 +299,8 @@ ul {
   transition-timing-function: var(--cubic);
 }
 
-.modal-btn-close:hover .modal-close-icon {
+.modal-btn-close:hover .modal-close-icon,
+.modal-btn-close:focus .modal-close-icon {
   fill: var(--accent-text-cl);
 }
 
@@ -417,6 +418,15 @@ ul {
 
 .checkbox:checked + .custom-checkbox {
   background-color: var(--accent-text-cl);
+  outline-color: var(--accent-text-cl);
+}
+
+.checkbox:checked:focus + .custom-checkbox {
+  outline-offset: 0;
+  outline-color: var(--title-text-cl);
+}
+
+.checkbox:focus + .custom-checkbox {
   outline-color: var(--accent-text-cl);
 }
 
